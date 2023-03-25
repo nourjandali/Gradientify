@@ -3,7 +3,6 @@ import palettes from "./tailwind-palette.json";
 import Logo from "./components/Logo";
 import HeroSection from "./components/HeroSection";
 import DropdownMenu from "./components/DropdownMenu";
-
 const optionsVia = [
   { label: "Inactive", value: "Inactive" },
   { label: "Active", value: "Active" },
@@ -97,7 +96,7 @@ function App() {
   };
 
   return (
-    <div className="max-w-6xl mb-12 mx-auto">
+    <div className="max-w-6xl mb-12 mx-4 lg:mx-auto">
       <Logo />
       <HeroSection />
 
@@ -105,7 +104,7 @@ function App() {
         {/* Gradient Type  */}
         <div className="flex flex-col justify-center items-center text-center">
           {/* Header  */}
-          <span className="font-bold text-2xl bg-gradient-to-r from-zinc-600 to-slate-600 bg-clip-text text-transparent">
+          <span className="font-bold text-xl lg:text-2xl bg-gradient-to-r from-zinc-600 to-slate-600 bg-clip-text text-transparent">
             Choose if you are looking for <br /> text or background gradients.
           </span>
 
@@ -162,11 +161,11 @@ function App() {
         </div>
 
         {/* Main  */}
-        <div className="mt-16 flex justify-evenly items-center">
+        <div className="mt-16 flex flex-col lg:flex-row justify-evenly items-center">
           {/* Left side */}
           {gradientType === "Background" ? (
             <div
-              className="pb-96 w-[40%] h-[426px] ml-8 rounded-xl"
+              className="pb-96 w-[90%] lg:w-[40%] h-[426px] lg:ml-8 rounded-xl"
               style={{
                 background:
                   via === "Inactive"
@@ -192,8 +191,8 @@ function App() {
             </div>
           )}
           {/* Right side  */}
-          <div>
-            <div className="flex gap-8 mb-2 text-sm font-semibold">
+          <div className="w-[90%] md:w-fit">
+            <div className="flex gap-8 mt-12 lg:mt-0 mb-2 text-sm font-semibold">
               {/* From Color  */}
               <button
                 className={`text-gray-500 ${
@@ -276,10 +275,10 @@ function App() {
         </div>
 
         {/* Random Generator  */}
-        <div className="mt-8 flex justify-evenly items-center">
+        <div className="mt-8 flex flex-col justify-center lg:flex-row lg:justify-evenly items-center">
           <button
             onClick={handleRandomClick}
-            className="w-72 flex justify-center items-center text-start -mt-20 gap-2 text-sm text-gray-500 font-semibold hover:text-emerald-700 transition duration-200 ease-in-out"
+            className="w-72 flex justify-center items-center text-start mb-10 lg:mb-0 lg:-mt-20 gap-2 text-sm text-gray-500 font-semibold hover:text-emerald-700 transition duration-200 ease-in-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -294,7 +293,7 @@ function App() {
             </svg>
             Random
           </button>
-          <div className="w-[40%] flex justify-between gap-2">
+          <div className="lg:w-[40%] flex justify-center gap-20 lg:justify-between lg:gap-2">
             <div>
               <h1 className="text-gray-500 text-sm mb-2 font-semibold">Via</h1>
               <DropdownMenu options={optionsVia} onChange={handleViaChange} />
@@ -312,9 +311,9 @@ function App() {
           </div>
         </div>
 
-        <div className="mt-6 flex justify-evenly items-center">
-          <div className="w-[515px]" />
-          <div className="w-[50%] flex gap-2">
+        <div className="mt-10 lg:mt-6 flex justify-center lg:justify-evenly items-center">
+          <div className="lg:w-[515px]" />
+          <div className="w-[80%] lg:w-[50%] flex gap-2">
             {/* CSS */}
             <input
               className="w-full rounded-md bg-gray-200 px-3 py-3 font-semibold text-gray-500 shadow-sm ring-1 ring-inset ring-gray-300 outline-none text-sm"
@@ -348,8 +347,6 @@ function App() {
             </button>
           </div>
         </div>
-
-        {/* ---- */}
       </div>
     </div>
   );

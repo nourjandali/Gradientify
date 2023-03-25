@@ -11,14 +11,14 @@ function DropdownMenu({ options, onChange }) {
   function handleOptionClick(option) {
     setSelectedOption(option.label);
     setIsOpen(false);
-    onChange(option); // call the onChange function with the selected option
+    onChange(option);
   }
 
   return (
     <div className="relative inline-block text-left">
       <div>
         <button
-          className="inline-flex w-[280px] justify-between gap-x-1.5 rounded-md bg-gray-200 px-3 py-3 text-sm font-semibold text-gray-500 shadow-sm ring-1 ring-inset ring-gray-300"
+          className="inline-flex md:w-[280px] lg:w-[280px] justify-between gap-x-1.5 rounded-md bg-gray-200 px-3 py-3 text-sm font-semibold text-gray-500 shadow-sm ring-1 ring-inset ring-gray-300"
           aria-expanded={isOpen ? "true" : "false"}
           aria-haspopup="true"
           onClick={toggleDropdown}
