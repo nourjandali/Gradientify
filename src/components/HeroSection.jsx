@@ -7,7 +7,7 @@ const HeroSection = () => {
         Gradient
         <br /> Generator
       </h1>
-      <p className="mt-2 inline-block uppercase font-bold bg-gradient-to-r from-zinc-800 to-slate-800 bg-clip-text text-transparent text-2xl lg:text-base">
+      <p className="mt-2 inline-block uppercase font-bold bg-gradient-to-r from-zinc-800 to-slate-800 bg-clip-text text-transparent text-2xl">
         Create stunning gradient backgrounds
         <br /> with{" "}
         <span className="border-b-2 border-emerald-500">Tailwind CSS</span>{" "}
