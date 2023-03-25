@@ -2,8 +2,8 @@ import React from "react";
 
 const Logo = () => {
   return (
-    <div className="flex items-center justify-between">
-      <h1 className="inline-block p-6 text-3xl lg:text-4xl font-bold bg-gradient-to-r from-emerald-700 to-emerald-500 bg-clip-text text-transparent">
+    <div className="flex items-center justify-between pl-2 pt-6 lg:p-6">
+      <h1 className="inline-block text-3xl lg:text-4xl font-bold bg-gradient-to-r from-emerald-700 to-emerald-500 bg-clip-text text-transparent">
         Gradientify
       </h1>
       <div className="flex items-center gap-4 ">
