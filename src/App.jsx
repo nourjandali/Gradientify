@@ -175,7 +175,7 @@ function App() {
             ></div>
           ) : (
             <div
-              className="flex items-center justify-center text-center w-[42.8%] text-5xl font-bold "
+              className="flex items-center justify-center text-center w-fit lg:w-[42.8%] text-4xl lg:text-5xl font-bold "
               style={{
                 backgroundImage:
                   via === "Inactive"
